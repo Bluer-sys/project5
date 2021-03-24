@@ -1,12 +1,11 @@
 ﻿# CMakeList.txt: проект CMake для ip_filter2; включите исходный код и определения,
 # укажите здесь логику для конкретного проекта.
 #
-cmake_minimum_required (VERSION 3.8)
-project(ip_filter2 VERSION 0.0.$ENV{TRAVIS_BUILD_NIMBER})
-
-
 include(${PROJECT_SOURCE_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
+
+cmake_minimum_required (VERSION 3.8)
+project(ip_filter2 VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 # Добавьте источник в исполняемый файл этого проекта.
 add_executable (ip_filter2 "ip_filter2.cpp" "ip_filter2.h")
