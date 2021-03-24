@@ -9,14 +9,14 @@ include(${PROJECT_SOURCE_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (filter "ip_filter2.cpp" "ip_filter2.h")
+add_executable (ip_filter2 "ip_filter2.cpp" "ip_filter2.h")
 
 set_target_properties(ip_filter2 PROPERTIES
 CXX_STANDARD 17
 CXX_STANDARD_REQUIRED ON
 COMPLETE_OPTIONS "-Wall")
 
-install(TARGETS filter RUNTIME DESTINATION bin)
+install(TARGETS ip_filter2 RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
